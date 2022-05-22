@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/Java")
+@RequestMapping("/java")
 public class JavaQuestionController {
 
     private final QuestionService javaQuestionService;
@@ -21,11 +21,11 @@ public class JavaQuestionController {
         this.javaQuestionService = javaQuestionService;
     }
 
-    @GetMapping("add")
+    @GetMapping("/add")
     public void add(@RequestParam String question, @RequestParam String answer) {
         javaQuestionService.add(question, answer);
     }
-    @GetMapping("remove")
+    @GetMapping("/remove")
     public void remove(@RequestParam String question, @RequestParam String answer) {
         javaQuestionService.remove(question, answer);
     }
