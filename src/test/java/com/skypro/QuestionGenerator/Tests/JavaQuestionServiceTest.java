@@ -3,7 +3,7 @@ package com.skypro.QuestionGenerator.Tests;
 
 import com.skypro.QuestionGenerator.Model.Question;
 import com.skypro.QuestionGenerator.Service.Impl.JavaQuestionService;
-import com.skypro.QuestionGenerator.Service.QuestionService;
+import com.skypro.QuestionGenerator.Service.Impl.QuestionRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -22,21 +22,13 @@ class JavaQuestionServiceTest {
     @InjectMocks
     private JavaQuestionService out;
 
+
     public void turnDown (){
     }
 
     @Test
-    public void test_add() {
-        Question question = new Question("test Question", "test Answer");
-        when(repository.add(question)).thenReturn(true, false);
-
-        assertTrue(out.add(question));
-        assertFalse(out.add(question));
-    }
-    @Test
-    public void test_add() {
-        Question question = new Question("test Question", "test Answer");
-        when(repository.add(question)).thenReturn(true, false);
+    void test_add() {
+        Question question = new Question("test Question1", "test Answer1");
 
         assertTrue(out.add(question.getQuestion(), question.getAnswer()));
         assertFalse(out.add(question.getQuestion(), question.getAnswer()));
