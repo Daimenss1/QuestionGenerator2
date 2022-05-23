@@ -1,8 +1,6 @@
 package com.skypro.QuestionGenerator.Controller;
 
-
 import com.skypro.QuestionGenerator.Model.Question;
-import com.skypro.QuestionGenerator.Service.Impl.JavaQuestionService;
 import com.skypro.QuestionGenerator.Service.QuestionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

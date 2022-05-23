@@ -1,16 +1,16 @@
 package com.skypro.QuestionGenerator.Service.Impl;
-
+import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.skypro.QuestionGenerator.Model.Exception.InvalidExamAmountException;
 import com.skypro.QuestionGenerator.Model.Question;
 import com.skypro.QuestionGenerator.Service.ExaminerService;
 import com.skypro.QuestionGenerator.Service.QuestionService;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.logging.Logger;
+
 
 
 @Service
