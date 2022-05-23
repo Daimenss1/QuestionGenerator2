@@ -24,18 +24,20 @@ public class ExaminerServiceImpl implements ExaminerService {
         this.questionService = questionService;
     }
 
+
     @Override
     public Collection<Question> getQuestions(int amount) {
-        int size = questionService.geSize();
+        int size = questionService.getSize();
         if (amount <= 0 || size < amount) {
             log.error("Amount must be positive" + size);
             throw new InvalidExamAmountException(amount, size);
         }
         Set<Question> questions = new HashSet<>();
-        while(questions.size() < amount){
+        while (questions.size() < amount) {
             questions.add(questionService.getRandomQuestion());
         }
-        log.info( "The following random question for amount", amount, questions);
+        log.info("The following random question for amount" + questions);
         return questions;
+
     }
 }
